@@ -1,0 +1,95 @@
+/* ESTILOS DE TODAS AS PÁGINAS */
+
+/* Estilo de cabeçalho*/
+
+.header{
+background-color: #1a1b49; /* cor de fundo */
+padding: 10px 20px; /* tamanho da área */
+align-items: center; /* alinhar no centro */
+display: flex; /* redimensionar */
+justify-content: space-between;
+/* colocar os espaços ao lado */
+}
+/* Cnfigurando a logo do site */
+.logo{
+display: flex;
+align-items: center;
+color: white;
+font-size: 18px; /* Tamanho da fonte do texto */
+font-weight: bold; /* texto em negrito */
+
+}
+.logo img{ /* Dimensões da imagem */
+   width: 50px; /* Tamanho */ 
+   margin-right: 10px; /* Margens */
+}
+
+/* CONFIGURAÇÃO DA BARRA DE PESQUISA */
+
+.search-box{
+   flex: 1; 
+   max-width: 600px; /* Largura máxima */
+   margin: 0 20px; /* Margem superior e lateral */
+   border: none; /**/
+   position: relative; /* Posição */
+   border-radius: 15px; /* Largura da borda */
+   font-size: 16px; /* tamanho do texto */
+}
+
+.search-box input{ /* Configuração da parte de dentro */
+   width: 100%; /* preencher toda área */
+   padding: 10px 40px 10px 15px; /* definindo o espaço cima, direita, baixo, esquerda */
+   border: none; /* Borda da caixa */
+   border-radius: 20px; /* expressura da borda*/
+   font-size: 16px; /* tamanho da fonte do texto */
+
+}
+
+/* CONFIGURANDO OS ICONES DO MENU SUPERIOR */
+
+.icons{
+   display: flex; /* os icones ficam flexiveis a mudança de tela */
+   gap: 15px; /* espaços entre os icones */
+   align-items: center; /* centralizar os itens no meio do menu */
+   margin-right: 20px; /* dá um espaço do icone com a borda lateral do menu*/
+}
+
+.icons img{ /* configurando as imagens dos icones*/
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+
+}
+
+/* CONFIGURAÇÕES PARA O RODAPÉ */
+
+.footer{
+   background-color: #1a488d; /* cor de fundo */
+   padding: 15px 40px 15px 40px; /* dimensão */
+   color: white; /* cor do texto */
+   font-family: Arial, Helvetica, sans-serif; /* fonte dos textos*/
+
+}
+
+.footer-esquerdo{
+   font-weight: bold; /* colocando o texto em negrito */
+   margin: 0; 
+}
+
+.footer-direito{
+   text-align: right; /* Texto alinhado á direita */
+   margin: 0 0 8px 0; 
+}
+
+.icons-sociais{ /* configurando a área onde fica os icones das redes sociais*/
+   display: flex; 
+   gap: 20px; /*distancia entre eles */
+   justify-content: flex-end;
+}
+
+.icons-sociais img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s; /* animação suave ao passar o mouse em cima */
+
+}

@@ -2,94 +2,260 @@
 
 /* Estilo de cabeçalho*/
 
-.header{
-background-color: #1a1b49; /* cor de fundo */
-padding: 10px 20px; /* tamanho da área */
-align-items: center; /* alinhar no centro */
-display: flex; /* redimensionar */
-justify-content: space-between;
-/* colocar os espaços ao lado */
-}
-/* Cnfigurando a logo do site */
-.logo{
-display: flex;
-align-items: center;
-color: white;
-font-size: 18px; /* Tamanho da fonte do texto */
-font-weight: bold; /* texto em negrito */
 
-}
-.logo img{ /* Dimensões da imagem */
-   width: 50px; /* Tamanho */ 
-   margin-right: 10px; /* Margens */
+/* inicio do estilo da tela de cadastro ---------------------- */
+body {
+background-color: white; /* cor de fundo */
 }
 
-/* CONFIGURAÇÃO DA BARRA DE PESQUISA */
-
-.search-box{
-   flex: 1; 
-   max-width: 600px; /* Largura máxima */
-   margin: 0 20px; /* Margem superior e lateral */
-   border: none; /**/
-   position: relative; /* Posição */
-   border-radius: 15px; /* Largura da borda */
-   font-size: 16px; /* tamanho do texto */
+.logo-cadastro {
+  width: 60px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-.search-box input{ /* Configuração da parte de dentro */
-   width: 100%; /* preencher toda área */
-   padding: 10px 40px 10px 15px; /* definindo o espaço cima, direita, baixo, esquerda */
-   border: none; /* Borda da caixa */
-   border-radius: 20px; /* expressura da borda*/
-   font-size: 16px; /* tamanho da fonte do texto */
-
+.card {
+  border-radius: 12px;
 }
 
-/* CONFIGURANDO OS ICONES DO MENU SUPERIOR */
+.toggle-senha {
+  position: absolute;
+  right: 10px;
+  top: 38px;
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+/* fim do estilo da tela de cadastro ------------------------ */
 
-.icons{
-   display: flex; /* os icones ficam flexiveis a mudança de tela */
-   gap: 15px; /* espaços entre os icones */
-   align-items: center; /* centralizar os itens no meio do menu */
-   margin-right: 20px; /* dá um espaço do icone com a borda lateral do menu*/
+/* inicio do estilo da tela de login ---------------------- */
+.bg-gold {
+  background-color: #d4a55d;
 }
 
-.icons img{ /* configurando as imagens dos icones*/
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-
+.bg-darkblue {
+  background-color: #1a1b49;
 }
 
-/* CONFIGURAÇÕES PARA O RODAPÉ */
-
-.footer{
-   background-color: #1a488d; /* cor de fundo */
-   padding: 15px 40px 15px 40px; /* dimensão */
-   color: white; /* cor do texto */
-   font-family: Arial, Helvetica, sans-serif; /* fonte dos textos*/
-
+.logo-login {
+  width: 120px;
+  height: auto;
 }
 
-.footer-esquerdo{
-   font-weight: bold; /* colocando o texto em negrito */
-   margin: 0; 
+.btn-login {
+  background-color: #1a1b49;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.footer-direito{
-   text-align: right; /* Texto alinhado á direita */
-   margin: 0 0 8px 0; 
+.btn-login:hover {
+  background-color: #131432;
+  color: #fff;
 }
 
-.icons-sociais{ /* configurando a área onde fica os icones das redes sociais*/
-   display: flex; 
-   gap: 20px; /*distancia entre eles */
-   justify-content: flex-end;
+.toggle-senha {
+  position: absolute;
+  right: 10px;
+  top: 38px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+/* fim do estilo da tela de login ------------------------ */
+
+/* inicio do estilo detalhe produto ---------------------- */
+.bg-darkblue {
+  background-color: #1a1b49;
 }
 
-.icons-sociais img {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.3s; /* animação suave ao passar o mouse em cima */
+.bg-darkblue-sub {
+  background-color: #0f1133;
+}
 
+.produto-principal {
+  max-width: 300px;
+}
+
+.thumb {
+  width: 80px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.thumb:hover {
+  transform: scale(1.1);
+}
+
+#quantidade {
+  border-radius: 5px;
+}
+
+.btn-warning {
+  background-color: #d4a55d;
+  border: none;
+  color: #000;
+}
+
+.btn-warning:hover {
+  background-color: #c2924d;
+  color: #000;
+}
+/* fim do estilo detalhe produto ------------------------ */
+
+/* inicio do estilo navbar ---------------------- */
+.bg-darkblue {
+  background-color: #1a1b49 !important;
+}
+
+.navbar {
+  padding: 0.8rem 1rem;
+}
+
+/* Barra de busca */
+.navbar .form-control {
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar .form-control:focus {
+  border-color: #d4a55d;
+  box-shadow: 0 0 5px rgba(212, 165, 93, 0.6);
+}
+
+/* Ícones */
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar .d-flex a {
+  color: #fff;
+  transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+.navbar .d-flex a:hover {
+  color: #d4a55d !important;
+  transform: scale(1.15);
+}
+
+.navbar .d-flex i {
+  font-size: 1.5rem;
+}
+/* fim do estilo navbar ------------------------ */
+
+/* inicio do componente estrelas ---------------------- */
+.estrelas-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Base da estrela (formato via clip-path) */
+.estrela {
+  width: 22px;              /* ajuste o tamanho aqui */
+  height: 22px;
+  display: inline-block;
+  margin-right: 4px;
+  /* Desenha a estrela com polígonos (sem imagem) */
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  background-color: #cfcfcf; /* estrela vazia */
+}
+
+/* Estrela cheia */
+.estrela--filled {
+  background-color: #f1c40f; /* dourado */
+}
+
+/* Meia estrela */
+.estrela--half {
+  background:
+    linear-gradient(90deg, #f1c40f 50%, #cfcfcf 50%);
+}
+
+/* Acessibilidade/hover opcional */
+.estrela:focus,
+.estrela:hover {
+  outline: none;
+  filter: brightness(1.05);
+}
+/* fim do componente estrelas ------------------------ */
+
+/* fundo */
+.bg-darkblue {
+  background-color: #1a1b49 !important;
+}
+
+/* Busca */
+.navbar .form-control {
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+}
+.navbar .form-control:focus {
+  border-color: #d4a55d;
+  box-shadow: 0 0 5px rgba(212, 165, 93, 0.6);
+}
+
+/* Botões */
+.btn-darkblue {
+  background-color: #1a1b49;
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.4rem 1.2rem;
+  transition: all 0.3s;
+}
+.btn-darkblue:hover {
+  background-color: #d4a55d;
+  color: #1a1b49;
+}
+
+/* Card Produtos */
+.product-card {
+  border-radius: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Marcas */
+.brand-logo img {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 10px;
+}
+.brand-logo:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(255,255,255,0.3);
+}
+
+/* Redes sociais */
+.social-icon {
+  font-size: 1.8rem;
+  color: #fff;
+  transition: transform 0.2s, color 0.3s;
+}
+.social-icon:hover {
+  color: #d4a55d;
+  transform: scale(1.2);
+}
+.marcas img{
+   width: 450px;
+   height: 210px
 }

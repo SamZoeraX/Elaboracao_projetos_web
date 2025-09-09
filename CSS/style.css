@@ -252,10 +252,142 @@ background-color: white; /* cor de fundo */
   transition: transform 0.2s, color 0.3s;
 }
 .social-icon:hover {
-  color: #d4a55d;
+  color: #d0ad6b;
   transform: scale(1.2);
 }
 .marcas img{
    width: 450px;
    height: 210px
+}
+
+/* Fundo */
+.bg-darkblue {
+  background-color: #1a1b49 !important;
+}
+
+/* Busca */
+.navbar .form-control {
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+}
+.navbar .form-control:focus {
+  border-color: #d0ad6b;
+  box-shadow: 0 0 5px rgba(212, 165, 93, 0.6);
+}
+
+/* Produtos no carrinho */
+.cart-img {
+  width: 70px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+.product-link:hover .cart-img {
+  transform: scale(1.1);
+}
+
+/* Botão remover */
+.remove-item {
+  border-radius: 50%;
+  padding: 0.4rem 0.6rem;
+}
+
+/* Redes sociais */
+.social-icon {
+  font-size: 1.8rem;
+  color: #fff;
+  transition: transform 0.2s, color 0.3s;
+}
+.social-icon:hover {
+  color: #d0ad6b;
+  transform: scale(1.2);
+}
+
+/* Fundo */
+.bg-darkblue {
+  background-color: #1a1b49 !important;
+}
+
+/* Input */
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.form-control:focus {
+  border-color: #d0ad6b;
+  box-shadow: 0 0 5px rgba(212, 165, 93, 0.6);
+}
+
+/* Produto resumo */
+.summary-img {
+  width: 70px;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+.product-link:hover .summary-img {
+  transform: scale(1.1);
+}
+
+/* Redes sociais */
+.social-icon {
+  font-size: 1.8rem;
+  color: #fff;
+  transition: transform 0.2s, color 0.3s;
+}
+.social-icon:hover {
+  color: #1a1b49;
+  transform: scale(1.2);
+}
+
+/* Botão de voltar */
+.navbar .bi-arrow-left {
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+.navbar .bi-arrow-left:hover {
+  transform: scale(1.2);
+  color: #d4a55d;
+}
+
+/* Cores personalizadas */
+.bg-darkblue {
+  background-color: #1a1b49 !important;
+}
+.btn-gold {
+  background-color: #d4a55d;
+  color: #1a1b49;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn-gold:hover {
+  background-color: #b8894c;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar input[type="search"] {
+  border-radius: 20px;
+  padding-left: 15px;
+}
+.navbar a {
+  transition: color 0.3s, transform 0.2s;
+}
+.navbar a:hover {
+  color: #d4a55d;
+  transform: scale(1.1);
+}
+
+/* Tabela */
+.table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.table td {
+  background-color: #2b2c6a;
+  padding: 12px;
+}
+
+/* Rodapé */
+footer {
+  border-top: 1px solid #444;
 }

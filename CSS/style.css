@@ -391,3 +391,215 @@ background-color: white; /* cor de fundo */
 footer {
   border-top: 1px solid #444;
 }
+
+/* inicio do estilo do painel do lojista ---------------------- */
+
+/* cores base */
+:root {
+  --sidebar-bg: #0f1a3a;
+  --navbar-bg: #1a1b49;
+  --gold: #d4a55d;
+  --card-gray: #e9ecef;
+}
+
+/* corpo */
+body {
+  background-color: var(--sidebar-bg);
+  color: #fff;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* navbar */
+.bg-darkblue {
+  background-color: var(--navbar-bg) !important;
+}
+.navbar .logo-small {
+  height: 36px;
+}
+.search-input {
+  border-radius: 20px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.02);
+  color: #fff;
+}
+.search-input::placeholder { color: rgba(255,255,255,0.6); }
+
+/* nav icons (direita) */
+.nav-icons a { color: #fff; transition: transform .15s, color .15s; }
+.nav-icons a:hover { color: var(--gold); transform: scale(1.08); }
+
+/* sidebar (desktop) */
+.sidebar {
+  background-color: var(--sidebar-bg) !important;
+  min-height: 100vh;
+  color: #dfe6f0;
+}
+.sidebar .logo img { display:block; margin: 0 auto; }
+.sidebar .nav-link {
+  color: #cfd8e3 !important;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  transition: background .18s, transform .12s;
+}
+.sidebar .nav-link i { color: #cfd8e3; margin-right: 8px; }
+.sidebar .nav-link:hover { background-color: rgba(255,255,255,0.03) !important; transform: translateX(4px); color: #fff !important; }
+
+/* offcanvas menu */
+.sidebar-offcanvas { background: var(--sidebar-bg); min-height: 100%; }
+.offcanvas .nav-link { color: #cfd8e3; }
+.offcanvas .btn-close-white { filter: invert(1); }
+
+/* content area */
+.content { padding: 22px; }
+
+/* header welcome */
+.header-welcome {
+  background: rgba(255,255,255,0.03);
+  padding: 18px;
+  border-radius: 6px;
+}
+
+/* cards de métricas */
+.card-metric {
+  background-color: var(--card-gray);
+  color: #111;
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* section title (Lista de Vendas / Entregas) */
+.section-title {
+  background-color: var(--gold);
+  color: var(--navbar-bg);
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* tabelas */
+.table {
+  background: #f5f6f8;
+  color: #111;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.table thead th {
+  background: #e9ecef;
+}
+.table tbody tr:hover {
+  background: #e8e8e8;
+  cursor: pointer;
+  transform: translateY(-1px);
+}
+
+/* footer */
+footer { color: rgba(255,255,255,0.6); }
+
+/* responsividade pequena */
+@media (max-width: 991px) {
+  .search-input { width: 100%; }
+}
+
+/* fim do estilo do painel do lojista ---------------------- */
+
+/* Navbar */
+.bg-darkblue {
+  background-color: #1a1b49 !important;
+}
+.logo-small {
+  height: 35px;
+}
+
+/* Form */
+.bg-form {
+  background-color: #e6dfd2;
+}
+
+/* Botões */
+.btn-darkblue {
+  background-color: #1a1b49;
+  color: #fff;
+}
+.btn-darkblue:hover {
+  background-color: #0f1333;
+  color: #fff;
+}
+
+/* Tabela */
+.table-darkblue {
+  background-color: #1a1b49;
+}
+
+/* Navbar */
+.bg-darkblue {
+  background-color: #1a1b49 !important;
+}
+.logo-small {
+  height: 35px;
+}
+
+/* Fundo dos cards/form */
+.bg-form {
+  background-color: #f8ebd9;
+}
+
+/* Botões */
+.btn-darkblue {
+  background-color: #1a1b49;
+  color: #fff;
+}
+.btn-darkblue:hover {
+  background-color: #0f1333;
+  color: #fff;
+}
+
+/* Tabelas */
+.table-darkblue {
+  background-color: #1a1b49;
+}
+
+body {
+  background-color: #e5e5e5;
+}
+
+.navbar {
+  background-color: #1a1b49;
+}
+
+.bg-light-custom {
+  background-color: #e6d8c8;
+  border-radius: 8px;
+}
+
+.table thead {
+  background-color: #0f1a3a !important;
+  color: white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #f2f2f2;
+}
+
+.footer {
+  background-color: #1a1b49;
+}
+
+button.btn-warning {
+  background-color: #f0ad4e;
+  border: none;
+}
+
+button.btn-danger {
+  background-color: #d9534f;
+  border: none;
+}
+
+button.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+}

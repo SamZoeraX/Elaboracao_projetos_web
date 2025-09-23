@@ -30,11 +30,17 @@
 
       <!-- Card do formulário -->
       <div class="card shadow-lg p-4 w-100" style="max-width: 500px;">
-        <form action=" caminho do php" method="post">
+        <form action="../php/cadastrocliente.php" method="post">
           <div class="mb-3">
             <label for="nome" class="form-label">Nome Completo:</label>
             <input type="text" class="form-control" id="nome" name="nome" required>
           </div>
+
+            <div class="mb-3">
+            <label for="CPF" class="form-label">CPF:</label>
+            <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" name="cpf" required>
+          </div>
+
 
           <div class="mb-3">
             <label for="telefone" class="form-label">Telefone:</label>

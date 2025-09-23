@@ -12,7 +12,7 @@ function redirecWith($url,$params=[]){
     $url .= $sep . $qs;
 }
 // joga a url para o cabeçalho no navegador
-header(Location: $url);
+header("Location: $url");
 // fecha o script
 exit;
 }
@@ -27,6 +27,7 @@ try{
     }
     // jogando os dados dentro de variáveis
     $nome = $_POST["nome"];
+    $cpf = $_POST["cpf"];
     $email = $_POST["email"];
     $senha = $_POST["senha"];
     $telefone = $_POST["telefone"];
@@ -35,7 +36,7 @@ try{
     // VALIDANDO OS CAMPOS
     // criar uma variável para receber os erros de validação
     $erros_validacao=[];
-    if($nome === "" || $email === "" || $senha === "" || $telefone === "" || $confirmarsenha === ""){
+    if($nome === "" || $cpf === "" || $email === "" || $senha === "" || $telefone === "" || $confirmarsenha === ""){
         $erros_validacao[]="Preencha todos os campos";
     }
      // validação para verificar se o email tem o @
@@ -54,21 +55,52 @@ if(strlen($senha)<8){
 if(strlen($telefone)<11){
     $erros_validacao[]= "Telefone incorreto";
 }
+// verificar se o cpf tem pelomenos 11 dígitos
+if(strlen($cpf)<11){
+    $erros_validacao[]= "CPF inválido";
+}
 // agora é enviar os erros para a tela de cadastro
 if($erros_validacao){
     redirecWith("../paginas/cadastro.html",
-    ["erro" => urlencode($erros_validacao[0])]);
-}
+    ["erro" => $erros_validacao[0]]);
 }
 
 // verificar se o cpf ja foi cadastrado no banco de dados
 $stmt = $pdo->prepare("SELECT * From Cliente
  Where cpf= :cpf LIMIT 1");
 // joga o cpf digitado dentro do banco de dados
-$stmt ->execute([':cpf =>$cpf']);
+$stmt ->execute([':cpf' =>$cpf]);
+// se o cpf ja existir ele volta a tela de cadastro
 if($stmt->fetch()){
     redirecWith("../paginas/cadastro.html",
-    ["erro" => urldecode("CPF já cadastrado")]);
+    ["erro" => "CPF já cadastrado"]);
 }
+/* Inserir o cliente no banco de dados */
+$sql ="INSERT INTO Cliente (nome, cpf, telefone, email, senha)
+VALUES (:nome, :cpf, :telefone, :email, :senha)";
+// executamos o comando no banco de dados
+$inserir = $pdo->prepare($sql)->execute([
+    ":nome" => $nome,
+    ":cpf" => $cpf,
+    ":telefone" => $telefone,
+    ":email" => $email,
+    ":senha" => $senha,
+]);
+/* Verificando se foi cadastrado no banco de dados */
+if($inserir){
+    redirecWith("../paginas/login.html",
+    ["cadastro" => "ok"]) ;
+}else{
+    redirecWith("../paginas/cadastro.html", ["erro" 
+    => "Erro ao cadastrar no banco de dados"]);
+}
+
+/* Agora que tudo foi feito no Try, vamos elaborar
+o catch com os possiveis erros */
+}catch(PDOException $e){
+    redirecWith("../paginas/cadastro.html",
+    ['erro' => 'Erro no banco de dados: ' . $e->getMessage()]);
+}
+    
 
 ?>

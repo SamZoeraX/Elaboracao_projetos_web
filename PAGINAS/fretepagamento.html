@@ -31,18 +31,18 @@
       <div class="col-lg-6">
         <div class="card shadow-sm p-3 bg-light-custom">
           <h5 class="fw-bold mb-3">Cadastro de Frete</h5>
-          <form id="freteForm" class="row g-2">
+          <form action="../PHP/cadastro_frete_e_pagamento_php" method="post"  class="row g-2">
             <div class="col-md-12">
               <label class="form-label">Nome</label>
-              <input type="text" class="form-control" required>
+              <input type="text"  name="nome" class="form-control" required>
             </div>
             <div class="col-md-6">
-              <label class="form-label">Preço</label>
-              <input type="text" class="form-control" placeholder="R$ 0,00" required>
+              <label class="form-label">Valor</label>
+              <input type="text" name="valor"  class="form-control" placeholder="R$ 0,00" required>
             </div>
             <div class="col-md-6">
               <label class="form-label">Cidade</label>
-              <input type="text" class="form-control" required>
+              <input type="text"  name="cidade" class="form-control" required>
             </div>
             <div class="col-md-12">
               <button type="submit" class="btn btn-primary w-100">Cadastrar Frete</button>

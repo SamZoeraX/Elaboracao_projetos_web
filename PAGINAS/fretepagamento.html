@@ -31,10 +31,10 @@
       <div class="col-lg-6">
         <div class="card shadow-sm p-3 bg-light-custom">
           <h5 class="fw-bold mb-3">Cadastro de Frete</h5>
-          <form action="../PHP/cadastro_frete_e_pagamento_php" method="post"  class="row g-2">
+          <form action="../PHP/cadastro_formas_pagamento.php" method="post"  class="row g-2">
             <div class="col-md-12">
-              <label class="form-label">Nome</label>
-              <input type="text"  name="nome" class="form-control" required>
+              <label class="form-label">Bairro</label>
+              <input type="text"  name="bairro" class="form-control" required>
             </div>
             <div class="col-md-6">
               <label class="form-label">Valor</label>
@@ -55,7 +55,7 @@
               <thead class="table-dark">
                 <tr>
                   <th>Bairro</th>
-                  <th>Preço</th>
+                  <th>Valor</th>
                   <th>Cidade</th>
                   <th>Ações</th>
                 </tr>
@@ -66,8 +66,8 @@
                   <td>R$ 8,00</td>
                   <td>Araguaína</td>
                   <td>
-                    <button class="btn btn-sm btn-warning">Editar</button>
-                    <button class="btn btn-sm btn-danger">Excluir</button>
+                    <button type="submit" class="btn btn-sm btn-warning">Editar</button>
+                    <button type="submit" class="btn btn-sm btn-danger">Excluir</button>
                   </td>
                 </tr>
                 <tr>
@@ -75,8 +75,8 @@
                   <td>R$ 40,00</td>
                   <td>Campinas</td>
                   <td>
-                    <button class="btn btn-sm btn-warning">Editar</button>
-                    <button class="btn btn-sm btn-danger">Excluir</button>
+                    <button type="submit" class="btn btn-sm btn-warning">Editar</button>
+                    <button type="submit" class="btn btn-sm btn-danger">Excluir</button>
                   </td>
                 </tr>
                 <tr>
@@ -84,8 +84,8 @@
                   <td>R$ 27,00</td>
                   <td>São Paulo</td>
                   <td>
-                    <button class="btn btn-sm btn-warning">Editar</button>
-                    <button class="btn btn-sm btn-danger">Excluir</button>
+                    <button type="submit" class="btn btn-sm btn-warning">Editar</button>
+                    <button type="submit" class="btn btn-sm btn-danger">Excluir</button>
                   </td>
                 </tr>
               </tbody>
